@@ -4,7 +4,8 @@
  * Decorators accepts objects as a parameter
  */
 
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { IProperty } from "../interfaces/IProperty.interface";
 
  @Component({
    selector: 'app-property-card',
@@ -15,10 +16,5 @@ import { Component } from "@angular/core";
 
  })
  export class PropertyCardComponent{
-  Property: any = {
-    "Id":1,
-    "Name":"Hyde Park",
-    "Type":"House",
-    "Price":15000
-  }
+   @Input() property : IProperty
  }
